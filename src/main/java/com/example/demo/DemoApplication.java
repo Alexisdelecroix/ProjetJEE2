@@ -18,7 +18,7 @@ public class DemoApplication {
 
 
 
-	@Bean
+//	@Bean
 	CommandLineRunner commandLineRunner(PatientRepository patientRepository){
 		return args -> {
 			patientRepository.save(new Patient(null,"Hassan",new Date(),false,112));

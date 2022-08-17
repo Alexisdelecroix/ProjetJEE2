@@ -44,6 +44,10 @@
                     <a onclick="return confirm('Etes vous sur de supprimer un patient')" class="btn btn-danger" th:href="@{delete(id=${p.id}, keyword=${keyword}, page=${currentPage})}">
                             Supprimer un patient</a>
                     </td>
+                    <td>
+                        <a class="btn btn-success" th:href="@{editPatient(id=${p.id}, keyword=${keyword}, page=${currentPage})}">
+                            Modifier un patient</a>
+                    </td>
                 </tr>
                 </tbody>
             </table>
