@@ -27,6 +27,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.formLogin();
+        http.authorizeRequests().antMatchers("/delete/**", "/edit/**","/save/**","/formPatient/**").hasRole("ADMIN");
         http.authorizeHttpRequests().anyRequest().authenticated();
     }
     @Bean
